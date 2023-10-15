@@ -1,0 +1,126 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.stuff-container {
+    border-radius: 2mm;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    background-color: rgb(25, 25, 25);
+}
+
+.all-container {
+    border-radius: 2mm;
+    background-color: rgb(20, 20, 20);
+}
+
+.calculate_button {
+    float: right;
+    position: relative;
+    border-radius: 2mm;
+    border-width: 1rem;
+    border: .2rem solid white;
+    margin: 20px 10px;
+    display: none;
+    width: 0;
+    height: 50px;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.5s;
+    text-align: center;
+    font-size: 1cm;
+    z-index: 1;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.init_button {
+    z-index: 1;
+    float: right;
+    position: relative;
+    border-radius: 2mm;
+    border-width: 1rem;
+    border: .2rem solid white;
+    margin: 20px 10px;
+    width: 830px;
+    height: 50px;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.5s;
+    text-align: center;
+    font-size: 1cm;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.label {
+    float: left;
+    border-radius: 2mm;
+    border-width: 1rem;
+    border: 2px solid white;
+    margin: 20px 10px;
+    width: 400px;
+    height: 50px;
+    background: transparent;
+    color: white;
+    transition-duration: 0.5s;
+    text-align: center;
+    font-size: 6mm;
+    font-weight: bold;
+}
+
+.input_box {
+    display: none;
+    float: none;
+    border-radius: 2mm;
+    border-width: 1rem;
+    border: 2px solid white;
+    margin: 20px 10px;
+    width: 0;
+    height: 50px;
+    background: transparent;
+    color: white;
+    transition-duration: 0.5s;
+    text-align: center;
+    font-size: 6mm;
+    font-weight: bold;
+}
+
+span {
+    background-color: white;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition-duration: 0.5s;
+}
+
+.calculate_button:hover span {
+    width: 100%;
+}
+
+.calculate_button:hover {
+    color: black;
+}
+
+.init_button:hover span {
+    width: 100%;
+}
+
+.init_button:hover {
+    color: black;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <title>Pepe Value Calculator</title>
+</head>
+
+<script type="text/javascript" src="functions.js"></script>
+
+<body>
+    <div class="all-container" id="things">
+        <div class="stuff-container">
+            <section class="label" id="level" onload="getText('level')"></section>
+            <section class="label" id="xp_normal" onload="getText('xp_normal')"></section>
+            <textarea class="input_box" id="level_normal" onblur="focusLost('level', 'level_normal')"></textarea>
+            <button class="calculate_button" id="level_recalc"
+                onclick="onButtonClick(['level', 'xp_normal'],'level_normal')">
+                <span class="calculate-button-span"></span>Recalculate</button>
+        </div>
+        <div class="stuff-container">
+            <section class="label" id="job_level" onload="getText('job_level')"></section>
+            <section class="label" id="xp_job" onload="getText('xp_job')"></section>
+            <textarea class="input_box" id="level_job" onblur="focusLost('job_level','level_job')"></textarea>
+            <button class="calculate_button" id="job_level_recalc"
+                onclick="onButtonClick(['job_level', 'xp_job'],'level_job')"><span
+                    class="calculate-button-span"></span>Recalculate</button>
+        </div>
+        <div class="stuff-container">
+            <section class="label" id="salary" onload="getText('salary')"></section>
+            <section class="label" id="job_tier" onload="getText('job_tier')"></section>
+            <textarea class="input_box" id="salary_input" onblur="focusLost('job', 'salary_input', 'tier')"></textarea>
+            <button class="calculate_button" id="salary_recalc"
+                onclick="onButtonClick(['salary', 'job_tier'],'salary_input')"><span
+                    class="calculate-button-span"></span>Recalculate</button>
+        </div>
+        <div class="stuff-container">
+            <section class="label" id="lottery_chance" onload="getText('lottery_chance')">
+            </section>
+            <section class="label" id="profit" onload="getText('profit')"></section>
+            <textarea class="input_box" id="lottery"
+                onblur="focusLost('your_tickets', 'lottery', 'approximate_Tickets')"></textarea>
+            <button class="calculate_button" id="lottery_recalc"
+                onclick="onButtonClick(['lottery_chance', 'profit'],'lottery')"><span
+                    class="calculate-button-span"></span>Recalculate</button>
+        </div>
+        <div class="stuff-container">
+            <button class="init_button" id="init"
+                onclick="init('init',['level', 'job_level', 'job_tier', 'xp_normal', 'xp_job', 'lottery_chance', 'salary', 'profit'],['level_recalc','job_level_recalc','salary_recalc','lottery_recalc'])"><span
+                    class="calculate-button-span"></span>Calculate</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
